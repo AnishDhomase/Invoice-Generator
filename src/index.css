@@ -1,0 +1,241 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  width: 100vw;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(0, 0, 0) 0%,
+    rgb(64, 64, 64) 90.2%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  overflow-x: hidden;
+}
+
+.outer {
+  background: #be93c5; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    135deg,
+    #7bc6cc,
+    #be93c5
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    135deg,
+    #7bc6cc,
+    #be93c5
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: inline-block;
+  width: 100%;
+  padding: 50px;
+  /* min-width: 600px; */
+  border-radius: 10px;
+}
+
+.itemInput {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.itemInput input {
+  outline: none;
+  border: none;
+  padding: 15px 20px;
+  font-size: 18px;
+  border-radius: 30px;
+  color: #4e2654;
+  width: 100%;
+}
+
+.itemInput input[type="text"] {
+  text-transform: capitalize;
+}
+
+.itemInput .itemCat {
+  padding: 15px 20px;
+  padding-right: 0;
+  font-size: 18px;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #4e2654;
+  width: 100%;
+}
+
+.itemInput .itemCat select {
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  font-size: 18px;
+  border-radius: 30px;
+  color: #4e2654;
+  flex-grow: 1;
+}
+
+.itemInput button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 15px 20px;
+  font-size: 18px;
+  border-radius: 30px;
+  background-color: #9ff9ff;
+  color: #4e2654;
+  font-weight: 700;
+  width: 100%;
+}
+
+.taxOuter {
+  background-color: #9ff9ff20;
+  padding: 20px 0;
+  border-radius: 0 0 30px 30px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: none;
+}
+.taxMsg {
+  padding: 35px 20px;
+  text-align: center;
+  padding-bottom: 0;
+  color: #4e2654;
+  animation: blink 0.5s infinite alternate-reverse;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+.taxOuter h2 {
+  text-align: center;
+  color: #4e2654;
+}
+li {
+  list-style: none;
+}
+.Tax {
+  /* border: 1px solid black; */
+  padding: 15px 20px;
+  margin-top: 15px;
+}
+.Tax li {
+  display: flex;
+  justify-content: center;
+}
+.Tax li span {
+  width: 30%;
+  color: #4e2654;
+  border: 1px solid rgba(0, 81, 255, 0.099);
+  text-align: center;
+}
+footer {
+  background-color: rgba(187, 0, 255, 0.035);
+  padding: 20px 0;
+  margin-top: 40px;
+  border-radius: 30px 30px 0 0;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-bottom: none;
+  min-width: 280px;
+}
+footer h2 {
+  text-align: center;
+  /* margin-top: 20px; */
+  color: #4e2654;
+}
+footer .content {
+  /* border: 1px solid black; */
+  padding: 15px 20px;
+  margin-top: 15px;
+}
+footer .content li {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+}
+footer .content li span {
+  width: 50%;
+  color: #4e2654;
+  text-transform: capitalize;
+  border: 1px solid rgba(195, 0, 255, 0.099);
+  text-align: center;
+}
+.txt {
+  color: rgb(6, 47, 48) !important;
+}
+
+.againAdd {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 15px 20px;
+  font-size: 18px;
+  border-radius: 30px;
+  background-color: #9ff9ff;
+  color: #4e2654;
+  font-weight: 700;
+  width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  footer {
+    padding: 20px 0;
+    margin-top: 40px;
+    border-radius: 30px 30px 0 0;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-bottom: none;
+    min-width: 300px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .outer {
+    width: 100%;
+    padding: 30px 20px;
+  }
+  body {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .taxMsg {
+    font-size: 20px;
+  }
+  footer .content li,
+  .Tax li {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .itemInput input {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+  .itemInput .itemCat {
+    padding: 12px 20px;
+    padding-right: 0;
+    font-size: 16px;
+  }
+  .itemInput .itemCat select {
+    padding: 5px 10px;
+    font-size: 16px;
+  }
+  .itemInput button {
+    padding: 12px 20px;
+    font-size: 17px;
+  }
+  .taxMsg {
+    font-size: 18px;
+  }
+}
